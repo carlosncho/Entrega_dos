@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Contenedor del logo -->
+  <ion-row class="ion-align-items-center ion-justify-content-center">
+    <ion-col size="auto">
+      <img src="assets/images/logo_duoc.png" alt="Logo"width="150" height="150">
+    </ion-col>
+  </ion-row>
+
+  <br>
+
+  <!-- Formulario de inicio de sesión -->
+  <ion-row class="ion-align-items-center ion-justify-content-center ion-text-center">
+    <ion-col size="10">
+      <ion-item>
+        <ion-label position="floating">Nombre de usuario</ion-label>
+        <ion-input [(ngModel)]="username" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+
+      <br>
+      
+      <ion-button expand="full" (click)="login()">Iniciar Sesión</ion-button>
+      <ion-button expand="full" (click)="iraRegistro()">Registro</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <br>
+
+  <!-- Enlace para restablecer la contraseña -->
+  <ion-row class="ion-align-items-center ion-justify-content-center ion-text-center">
+    <ion-col size="10">
+      <a (click)="iraCambiarPassword()">¿Olvidaste tu Contraseña?</a>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

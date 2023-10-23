@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button mode="ios" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <!-- Formulario de registro -->
+  <ion-row class="ion-align-items-center ion-justify-content-center ion-text-center">
+    <ion-col size="10">
+      <ion-item>
+        <ion-label position="floating">Nombre de usuario</ion-label>
+        <ion-input [(ngModel)]="username" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+      </ion-item>  
+
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input [(ngModel)]="apellido" type="text"></ion-input>
+      </ion-item>  
+
+      <ion-item>
+        <ion-label position="floating">Rut</ion-label>
+        <ion-input [(ngModel)]="rut" type="text"></ion-input>
+      </ion-item>  
+
+      <ion-item>
+        <ion-label position="floating">Carrera</ion-label>
+        <ion-input [(ngModel)]="carrera" type="text"></ion-input>
+      </ion-item>  
+        
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+
+      <br>
+
+      <ion-item>
+        <a>Region</a>
+        <ion-select [(ngModel)]="selectedRegion">
+          <ion-select-option *ngFor="let region of regiones" [value]="region.id">{{ region.nombre }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br>
+      <!-- <ion-item>
+        <a>Comuna</a>
+        <ion-select [(ngModel)]="selectedComuna">
+          <ion-select-option *ngFor="let comuna of comunas" [value]="comuna.id">{{ comuna.nombre }}</ion-select-option>
+        </ion-select>
+      </ion-item> -->
+      <br>
+
+      <ion-button expand="full" (click)="register()">Registrarse</ion-button>
+    </ion-col>
+  </ion-row>
+
+  </ion-card>
+  
+</ion-content>
